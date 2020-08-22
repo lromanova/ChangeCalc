@@ -2,4 +2,7 @@
     <string name="app_name">AppBar Version1</string>
     <string name="btn_save_caption">Сохранить</string>
     <string name="toast_message">данные сохранены</string>
+    <string name="menu_settings">Закрыть приложение</string>
+    <string name="menu_notes">Записная книжка</string>
+    <string name="action_open">Отркыть записную книжку</string>
 </resources>
