@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">AppBar Version1</string>
+    <string name="btn_save_caption">Сохранить</string>
+    <string name="toast_message">данные сохранены</string>
+</resources>
