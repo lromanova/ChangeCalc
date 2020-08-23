@@ -2,14 +2,13 @@ package com.sitaara.appbarver1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Button;
 
+public class RelativeCalc extends AppCompatActivity {
 
-public class LinerCalc extends AppCompatActivity {
     private TextView txtRes;
     private Button btnDot;
     private Button btn0;
@@ -23,11 +22,13 @@ public class LinerCalc extends AppCompatActivity {
     private Button btn8;
     private Button btn9;
 
+    private Button btnClear;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_liner_calc);
+        setContentView(R.layout.activity_relative_calc);
         InitViews();
     }
 
@@ -57,6 +58,17 @@ public class LinerCalc extends AppCompatActivity {
         btn9.setOnClickListener(CreateButtonListener());
         btnDot.setOnClickListener(CreateButtonListener());
 
+        btnClear = findViewById(R.id.btnClear);
+        btnClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Button btn = (Button)view;
+
+                txtRes.setText("");
+
+            }
+        });
+
     }
 
     private View.OnClickListener CreateButtonListener (){
@@ -64,11 +76,11 @@ public class LinerCalc extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Button btn = (Button)view;
-                txtRes.setText(btn.getText().toString());
+
+                txtRes.setText(txtRes.getText() + btn.getText().toString());
 
             }
         };
     }
-
 
 }
