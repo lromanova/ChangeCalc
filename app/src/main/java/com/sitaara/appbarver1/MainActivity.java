@@ -34,22 +34,23 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        Intent intentNotes;
         int id = item.getItemId();
 
-        if (id == R.id.action_open_notes) {
-            Toast.makeText(MainActivity.this, R.string.action_open, Toast.LENGTH_LONG).show();
-
-            Intent intentNotes = new Intent(MainActivity.this, NoteActivity.class);
-            startActivity(intentNotes);
-
-            return true;
+        switch (id){
+            case  R.id.action_open_notes:
+                intentNotes = new Intent(MainActivity.this, NoteActivity.class);
+                startActivity(intentNotes);
+                break;
+            case R.id.action_calculator:
+                intentNotes = new Intent(MainActivity.this, RelativeCalc.class);
+                startActivity(intentNotes);
+                break;
+            case R.id.action_finish:
+                finish();
+                break;
         }
-        if (id == R.id.action_finish) {
-            finish();
 
-            return true;
-        }
         return super.onOptionsItemSelected(item);
     }
 }

@@ -14,4 +14,9 @@
         android:orderInCategory="100"
         android:title="@string/menu_notes"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_calculator"
+        android:orderInCategory="100"
+        android:title="@string/menu_calc"
+        app:showAsAction="never" />
 </menu>
