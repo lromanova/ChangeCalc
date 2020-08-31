@@ -6,4 +6,5 @@
     <string name="menu_notes">Записная книжка</string>
     <string name="action_open">Отркыть записную книжку</string>
     <string name="menu_calc">Калькулятор</string>
+    <string name="button_gone">Переключить вид</string>
 </resources>
